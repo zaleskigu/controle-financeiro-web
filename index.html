@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<title>Controle Financeiro</title>
 <meta charset="UTF-8">
+<title>Controle Financeiro</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1f2937">
+<link rel="icon" href="img/favicon.png">
 </head>
-
 <body>
-<h1>Controle Financeiro funcionando 🚀</h1>
-<p>Meu site está online!</p>
-</body>
 
+<header class="topo">
+    <img src="img/icon.png" class="logo">
+    <h1>Zaleski Finance</h1>
+</header>
+
+<div class="form">
+<input id="descricao" placeholder="Descrição">
+<input id="valor" type="number" placeholder="Valor">
+
+<select id="tipo">
+<option value="saida">Saída</option>
+<option value="entrada">Entrada</option>
+</select>
+
+<input type="date" id="data">
+
+<button onclick="adicionar()">Adicionar</button>
+</div>
+
+<div class="card-total">
+Saldo atual
+<span class="saldo-info">
+<span id="seta">▲</span>
+R$ <span id="total" class="saldo-valor">0</span>
+</span>
+</div>
+
+<div id="lista" class="lista"></div>
+
+<div style="margin-top:40px;">
+<canvas id="graficoMensal"></canvas>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+<div class="modal-box">
+
+<h3>Editar gasto</h3>
+
+<input id="editDescricao" placeholder="Descrição">
+<input id="editValor" type="number" placeholder="Valor">
+
+<select id="editTipo">
+<option value="saida">Saída</option>
+<option value="entrada">Entrada</option>
+</select>
+
+<input type="date" id="editData">
+
+<div class="modal-actions">
+<button class="btn-editar" onclick="salvarEdicao()">Salvar</button>
+<button class="btn-excluir" onclick="fecharModal()">Cancelar</button>
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
