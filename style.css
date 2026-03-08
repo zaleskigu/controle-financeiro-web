@@ -1,0 +1,189 @@
+body{
+font-family:Arial;
+max-width:500px;
+margin:40px auto;
+background:#f5f5f5;
+}
+
+h1{
+text-align:center;
+}
+
+.form{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+input,select{
+padding:10px;
+border-radius:8px;
+border:1px solid #ddd;
+flex:1;
+}
+
+button{
+padding:10px 14px;
+cursor:pointer;
+border-radius:8px;
+border:none;
+background:#1f2937;
+color:white;
+font-weight:bold;
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.card-total{
+margin-top:20px;
+background:#1f2937;
+color:white;
+padding:18px;
+border-radius:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.saldo-info{
+display:flex;
+gap:8px;
+align-items:center;
+font-size:18px;
+}
+
+.saldo-valor{
+font-size:28px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.positivo{
+color:#22c55e;
+}
+
+.negativo{
+color:#ef4444;
+}
+
+#seta{
+font-size:22px;
+font-weight:bold;
+}
+
+.lista{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.card-gasto{
+background:white;
+padding:14px 16px;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 6px 14px rgba(0,0,0,0.05);
+animation:aparecer 0.3s ease;
+}
+
+.info{
+display:flex;
+flex-direction:column;
+}
+
+.nome{
+font-weight:600;
+}
+
+.valor{
+font-weight:bold;
+}
+
+.data{
+font-size:12px;
+color:#666;
+}
+
+.btn-editar{
+background:#2563eb;
+padding:6px 10px;
+font-size:12px;
+}
+
+.btn-excluir{
+background:#dc2626;
+padding:6px 10px;
+font-size:12px;
+}
+
+canvas{
+margin-top:10px;
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.45);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.modal-box{
+background:white;
+padding:20px;
+border-radius:14px;
+width:300px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.modal-actions{
+display:flex;
+gap:10px;
+}
+
+.card-gasto{
+background:white;
+padding:14px 16px;
+border-radius:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 6px 14px rgba(0,0,0,0.05);
+animation:aparecer 0.3s ease;
+transition:all 0.25s ease;
+}
+
+.card-gasto:hover{
+transform:translateY(-3px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+cursor:pointer;
+}
+
+.topo{
+display:flex;
+align-items:center;
+gap:10px;
+justify-content:center;
+}
+
+.logo{
+width:125px !important;
+height:100px !important;
+}
+
+@keyframes aparecer{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
+}
